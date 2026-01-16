@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Cell Atlas | WangLab-CEMPS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">🌱</span>
+                <span class="logo-text">Plant Cell Atlas</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about" data-i18n="nav.about">关于我们</a></li>
+                <!-- <li><a href="#atlas" data-i18n="nav.atlas">细胞图谱</a></li> -->
+                <li><a href="#research" data-i18n="nav.research">研究方向</a></li>
+                <li><a href="#publications" data-i18n="nav.publications">发表论文</a></li>
+                <!-- <li><a href="#team" data-i18n="nav.team">团队</a></li> -->
+                <li><a href="#contact" data-i18n="nav.contact">联系方式</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="zh">中文</button>
+                <span class="lang-divider">|</span>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg">
+            <div class="cell cell-1"></div>
+            <div class="cell cell-2"></div>
+            <div class="cell cell-3"></div>
+            <div class="cell cell-4"></div>
+            <div class="cell cell-5"></div>
+            <div class="cell cell-6"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-tag">WangLab @ CEMPS</p>
+            <h1 class="hero-title">
+                <span class="title-line">Plant</span>
+                <span class="title-line">Cell Atlas</span>
+            </h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle" data-i18n-html="true">
+                探索植物单细胞世界的奥秘<br>
+                构建全面的植物细胞图谱
+            </p>
+            <div class="hero-actions">
+                <a href="#atlas" class="btn btn-primary" data-i18n="hero.browseAtlas">浏览图谱</a>
+                <a href="#about" class="btn btn-outline" data-i18n="hero.learnMore">了解更多</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span data-i18n="hero.scrollDown">向下滚动</span>
+            <div class="scroll-indicator"></div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Us</span>
+                <h2 class="section-title" data-i18n="about.title">关于 Plant Cell Atlas</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="lead" data-i18n="about.lead">
+                        Plant Cell Atlas 项目致力于构建全面、高分辨率的植物单细胞转录组图谱，
+                        揭示植物细胞的多样性与复杂性。
+                    </p>
+                    <p data-i18n="about.desc1">
+                        我们运用前沿的单细胞测序技术，系统性地解析不同植物物种、
+                        不同发育阶段和不同组织器官中的细胞类型组成，
+                        为理解植物生长发育、环境响应和进化提供重要的细胞层面的洞见。
+                    </p>
+                </div>
+                <!-- Stats section hidden
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="50">50+</span>
+                        <span class="stat-label" data-i18n="about.stats.species">植物物种</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="1000000">1M+</span>
+                        <span class="stat-label" data-i18n="about.stats.cells">单细胞数据</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="200">200+</span>
+                        <span class="stat-label" data-i18n="about.stats.cellTypes">细胞类型</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="30">30+</span>
+                        <span class="stat-label" data-i18n="about.stats.partners">合作机构</span>
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Atlas Section (Hidden)
+    <section id="atlas" class="section atlas">
+        <div class="container">
+            <div class="section-header section-header-light">
+                <span class="section-tag">Cell Atlas</span>
+                <h2 class="section-title" data-i18n="atlas.title">细胞图谱数据库</h2>
+                <p class="section-desc" data-i18n="atlas.desc">探索我们收录的植物单细胞数据集</p>
+            </div>
+            <div class="atlas-grid">
+                <div class="atlas-card">
+                    <div class="atlas-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="atlas.arabidopsis.name" data-i18n-html="true">拟南芥 <em>Arabidopsis</em></h3>
+                    <p data-i18n="atlas.arabidopsis.desc">模式植物全器官单细胞图谱，涵盖根、茎、叶、花等组织</p>
+                    <span class="atlas-meta" data-i18n="atlas.arabidopsis.meta">120,000+ 细胞</span>
+                    <a href="#" class="atlas-link" data-i18n="atlas.viewDetails">查看详情 →</a>
+                </div>
+                <div class="atlas-card">
+                    <div class="atlas-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="atlas.rice.name" data-i18n-html="true">水稻 <em>Oryza sativa</em></h3>
+                    <p data-i18n="atlas.rice.desc">重要粮食作物的发育图谱，追踪胚胎到成熟的细胞命运</p>
+                    <span class="atlas-meta" data-i18n="atlas.rice.meta">200,000+ 细胞</span>
+                    <a href="#" class="atlas-link" data-i18n="atlas.viewDetails">查看详情 →</a>
+                </div>
+                <div class="atlas-card">
+                    <div class="atlas-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v6m0 6v10"/>
+                            <path d="M4.22 4.22l4.24 4.24m7.08 7.08l4.24 4.24"/>
+                            <path d="M1 12h6m6 0h10"/>
+                            <path d="M4.22 19.78l4.24-4.24m7.08-7.08l4.24-4.24"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="atlas.maize.name" data-i18n-html="true">玉米 <em>Zea mays</em></h3>
+                    <p data-i18n="atlas.maize.desc">C4植物叶片与根系的细胞多样性研究</p>
+                    <span class="atlas-meta" data-i18n="atlas.maize.meta">150,000+ 细胞</span>
+                    <a href="#" class="atlas-link" data-i18n="atlas.viewDetails">查看详情 →</a>
+                </div>
+                <div class="atlas-card">
+                    <div class="atlas-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="atlas.tomato.name" data-i18n-html="true">番茄 <em>Solanum lycopersicum</em></h3>
+                    <p data-i18n="atlas.tomato.desc">果实发育与成熟过程中的细胞转录组动态</p>
+                    <span class="atlas-meta" data-i18n="atlas.tomato.meta">180,000+ 细胞</span>
+                    <a href="#" class="atlas-link" data-i18n="atlas.viewDetails">查看详情 →</a>
+                </div>
+                <div class="atlas-card">
+                    <div class="atlas-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="atlas.poplar.name" data-i18n-html="true">杨树 <em>Populus</em></h3>
+                    <p data-i18n="atlas.poplar.desc">木本植物形成层与木质部发育的单细胞解析</p>
+                    <span class="atlas-meta" data-i18n="atlas.poplar.meta">100,000+ 细胞</span>
+                    <a href="#" class="atlas-link" data-i18n="atlas.viewDetails">查看详情 →</a>
+                </div>
+                <div class="atlas-card atlas-card-more">
+                    <div class="atlas-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 5v14m-7-7h14"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="atlas.more.name">更多物种</h3>
+                    <p data-i18n="atlas.more.desc">持续更新中，敬请期待更多植物物种的单细胞数据</p>
+                    <a href="#contact" class="atlas-link" data-i18n="atlas.more.link">合作咨询 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- Research Section -->
+    <section id="research" class="section research">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Research</span>
+                <h2 class="section-title" data-i18n="research.title">研究方向</h2>
+                <p class="section-desc" data-i18n="research.desc">从"单点突破"到"多点开花"，再到"系统整合"的研究范式</p>
+            </div>
+            <div class="research-grid research-grid-3">
+                <article class="research-card research-card-large">
+                    <div class="research-number">01</div>
+                    <div class="research-tag" data-i18n="research.r1.tag">Developmental Atlases</div>
+                    <h3 data-i18n="research.r1.title">植物细胞发育的"时空图谱"</h3>
+                    <p class="research-lead" data-i18n="research.r1.lead">解析植物关键器官在单细胞水平上的发育逻辑，从模式植物向农作物延伸。</p>
+                    <ul class="research-list">
+                        <li data-i18n="research.r1.point1" data-i18n-html="true"><strong>模式植物研究</strong>：通过对拟南芥根部和茎尖生长点的单细胞测序，首次在细胞分辨率下描绘发育完整景观，解析细胞命运决定因素</li>
+                        <li data-i18n="research.r1.point2" data-i18n-html="true"><strong>农作物应用</strong>：将研究扩展至水稻，通过 scRNA-seq 与 scATAC-seq 整合分析，揭示单子叶植物根系的细胞分化轨迹</li>
+                        <li data-i18n="research.r1.point3" data-i18n-html="true"><strong>成熟与衰老</strong>：通过对苔藓植物地钱的研究，探索植物从成熟到衰老的单细胞时序变化</li>
+                    </ul>
+                </article>
+                <article class="research-card research-card-large">
+                    <div class="research-number">02</div>
+                    <div class="research-tag" data-i18n="research.r2.tag">Evolution & Unified Atlas</div>
+                    <h3 data-i18n="research.r2.title">跨物种演化与"植物细胞大图谱"</h3>
+                    <p class="research-lead" data-i18n="research.r2.lead">寻找不同植物物种之间细胞类型的内在联系，回答植物"如何演化"的宏大命题。</p>
+                    <ul class="research-list">
+                        <li data-i18n="research.r2.point1" data-i18n-html="true"><strong>统一图谱构建</strong>：构建涵盖多种维管植物的"统一细胞图谱"（Unified Cell Atlas），识别不同物种间共有的"基础基因"</li>
+                        <li data-i18n="research.r2.point2" data-i18n-html="true"><strong>细胞演化探索</strong>：比较蕨类、苔藓及被子植物的细胞类型，探索维管系统在亿万年演化中的起源规律</li>
+                        <li data-i18n="research.r2.point3" data-i18n-html="true"><strong>基因挖掘</strong>：利用跨物种图谱数据，加速发现对植物发育至关重要的保守功能基因</li>
+                    </ul>
+                </article>
+                <article class="research-card research-card-large">
+                    <div class="research-number">03</div>
+                    <div class="research-tag" data-i18n="research.r3.tag">Methodological Innovation</div>
+                    <h3 data-i18n="research.r3.title">针对复杂植物样本的"技术破局"</h3>
+                    <p class="research-lead" data-i18n="research.r3.lead">针对植物细胞壁、组织难解离、样本保存困难等痛点，开展技术攻关。</p>
+                    <ul class="research-list">
+                        <li data-i18n="research.r3.point1" data-i18n-html="true"><strong>FX-Cell 方法学</strong>：开发 FX-Cell 技术，解决"难消化"植物样本及"超低温冷冻"样本的单细胞测序难题，扩展技术适用范围</li>
+                        <li data-i18n="research.r3.point2" data-i18n-html="true"><strong>多组学整合</strong>：整合转录组、表观组及空间信息，实现对植物细胞状态的立体刻画</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section publications">
+        <div class="container">
+            <div class="section-header section-header-light">
+                <span class="section-tag">Publications</span>
+                <h2 class="section-title" data-i18n="publications.title">代表性论文</h2>
+            </div>
+            <div class="pub-list">
+                <article class="pub-item">
+                    <span class="pub-year">2025</span>
+                    <div class="pub-content">
+                        <h3>A unified cell atlas of vascular plants reveals cell-type foundational genes and accelerates gene discovery</h3>
+                        <p class="pub-authors">Xue H-C, Xu Z-G, Liu Y-J, Wang L, Ming X, Wu Z-Y, Lian H, Han Y-W, Xu J, Zhang Z-D, Shao Q-L, Liu K, Wan M-C, & Wang J-W</p>
+                        <p class="pub-journal"><em>Cell</em>, 188(16), 3986-4003.e21</p>
+                    </div>
+                    <a href="https://doi.org/10.1016/j.cell.2025.07.036" target="_blank" class="pub-link">PDF</a>
+                </article>
+                <article class="pub-item">
+                    <span class="pub-year">2025</span>
+                    <div class="pub-content">
+                        <h3>FX-Cell: a method for single-cell RNA sequencing on difficult-to-digest and cryopreserved plant samples</h3>
+                        <p class="pub-authors">Ming X, Wan M-C, Zhang Z-D, Xue H-C, Wu Y-Q, Xu Z-G, Mai Y-X, Hu Y-X, Liu K, Gao J, Shao Q-L, Marchant DB, Nelms B, Walbot V, & Wang J-W</p>
+                        <p class="pub-journal"><em>Nature Methods</em>, 22, 2551–2562</p>
+                    </div>
+                    <a href="https://doi.org/10.1038/s41592-025-02900-2" target="_blank" class="pub-link">PDF</a>
+                </article>
+                <article class="pub-item">
+                    <span class="pub-year">2023</span>
+                    <div class="pub-content">
+                        <h3>The maturation and aging trajectory of <em>Marchantia polymorpha</em> at single-cell resolution</h3>
+                        <p class="pub-authors">Wang L, Wan M-C, Liao R-Y, Xu J, Xu Z-G, Xue H-C, Mai Y-X, & Wang J-W</p>
+                        <p class="pub-journal"><em>Developmental Cell</em>, 58(16), 1429-1444.e4</p>
+                    </div>
+                    <a href="https://doi.org/10.1016/j.devcel.2023.05.014" target="_blank" class="pub-link">PDF</a>
+                </article>
+                <article class="pub-item">
+                    <span class="pub-year">2023</span>
+                    <div class="pub-content">
+                        <h3>Analysis of meristems and plant regeneration at single-cell resolution</h3>
+                        <p class="pub-authors">Liao R-Y, & Wang J-W</p>
+                        <p class="pub-journal"><em>Current Opinion in Plant Biology</em>, 74, 102378 <span class="pub-badge">Review</span></p>
+                    </div>
+                    <a href="https://doi.org/10.1016/j.pbi.2023.102378" target="_blank" class="pub-link">PDF</a>
+                </article>
+                <article class="pub-item">
+                    <span class="pub-year">2021</span>
+                    <div class="pub-content">
+                        <h3>A single-cell analysis of the <em>Arabidopsis</em> vegetative shoot apex</h3>
+                        <p class="pub-authors">Zhang T-Q, Chen Y, & Wang J-W</p>
+                        <p class="pub-journal"><em>Developmental Cell</em>, 56(7), 1056-1074.e8</p>
+                    </div>
+                    <a href="https://doi.org/10.1016/j.devcel.2021.02.021" target="_blank" class="pub-link">PDF</a>
+                </article>
+                <article class="pub-item">
+                    <span class="pub-year">2021</span>
+                    <div class="pub-content">
+                        <h3>Single-cell transcriptome atlas and chromatin accessibility landscape reveal differentiation trajectories in the rice root</h3>
+                        <p class="pub-authors">Zhang T-Q, Chen Y, Liu Y, & Wang J-W</p>
+                        <p class="pub-journal"><em>Nature Communications</em>, 12(1), 2053</p>
+                    </div>
+                    <a href="https://doi.org/10.1038/s41467-021-22352-4" target="_blank" class="pub-link">PDF</a>
+                </article>
+                <article class="pub-item">
+                    <span class="pub-year">2019</span>
+                    <div class="pub-content">
+                        <h3>A Single-Cell RNA Sequencing Profiles the Developmental Landscape of <em>Arabidopsis</em> Root</h3>
+                        <p class="pub-authors">Zhang T-Q, Xu Z-G, Shang G-D, & Wang J-W</p>
+                        <p class="pub-journal"><em>Molecular Plant</em>, 12(5), 648–660</p>
+                    </div>
+                    <a href="https://doi.org/10.1016/j.molp.2019.04.004" target="_blank" class="pub-link">PDF</a>
+                </article>
+            </div>
+            <div class="pub-more">
+                <a href="https://github.com/WangLab-CEMPS" target="_blank" class="btn btn-outline-light" data-i18n="publications.viewMore">查看更多</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section (Hidden)
+    <section id="team" class="section team">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Team</span>
+                <h2 class="section-title" data-i18n="team.title">研究团队</h2>
+                <p class="section-desc" data-i18n="team.desc">来自 CEMPS 的优秀科研人员</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder">PI</div>
+                    </div>
+                    <h3>Wang Lab PI</h3>
+                    <span class="team-role" data-i18n="team.pi.role">课题组长 / 研究员</span>
+                    <p data-i18n="team.pi.focus">单细胞组学与植物发育生物学</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder">PD</div>
+                    </div>
+                    <h3 data-i18n="team.postdoc.name">博士后研究员</h3>
+                    <span class="team-role" data-i18n="team.postdoc.role">博士后</span>
+                    <p data-i18n="team.postdoc.focus">生物信息学与数据分析</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder">PhD</div>
+                    </div>
+                    <h3 data-i18n="team.phd.name">博士研究生</h3>
+                    <span class="team-role" data-i18n="team.phd.role">研究生</span>
+                    <p data-i18n="team.phd.focus">单细胞测序技术开发</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder">RA</div>
+                    </div>
+                    <h3 data-i18n="team.ra.name">科研助理</h3>
+                    <span class="team-role" data-i18n="team.ra.role">实验技术员</span>
+                    <p data-i18n="team.ra.focus">实验室管理与技术支持</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">Contact</span>
+                    <h2 data-i18n="contact.title">联系我们</h2>
+                    <p data-i18n="contact.desc">
+                        欢迎对植物单细胞研究感兴趣的研究者与我们合作交流。
+                        我们期待与您共同推进植物细胞图谱的构建。
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <strong data-i18n="contact.address">地址</strong>
+                                <p data-i18n="contact.addressValue" data-i18n-html="true">上海市徐汇区枫林路300号<br>中国科学院分子植物科学卓越创新中心</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <div>
+                                <strong data-i18n="contact.email">邮箱</strong>
+                                <p>jwwang@sippe.ac.cn</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🔗</span>
+                            <div>
+                                <strong>GitHub</strong>
+                                <p><a href="https://github.com/WangLab-CEMPS" target="_blank">github.com/WangLab-CEMPS</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name" data-i18n="contact.form.name">姓名</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="contact.form.email">邮箱</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="affiliation" data-i18n="contact.form.affiliation">单位</label>
+                            <input type="text" id="affiliation" name="affiliation">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-i18n="contact.form.message">留言</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" data-i18n="contact.form.submit">发送消息</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🌱</span>
+                    <span>Plant Cell Atlas</span>
+                </div>
+                <p class="footer-text" data-i18n="footer.text" data-i18n-html="true">
+                    © 2025 WangLab @ CEMPS. All rights reserved.<br>
+                    中国科学院分子植物科学卓越创新中心
+                </p>
+                <div class="footer-links">
+                    <a href="https://github.com/WangLab-CEMPS" target="_blank">GitHub</a>
+                    <a href="#publications" data-i18n="nav.publications">Publications</a>
+                    <a href="#contact" data-i18n="nav.contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
