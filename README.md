@@ -81,6 +81,51 @@ python -m http.server 8000
 </article>
 ```
 
+### 添加细胞图谱
+
+当前已添加的图谱：
+- 2019 Arabidopsis root  https://explorer.plantcellatlas.com/?dataset=ath_root
+- 2021 Arabidopsis shoot https://explorer.plantcellatlas.com/?dataset=ath_shoot
+- 2023 Marchantia polymorpha census https://explorer.plantcellatlas.com/?dataset=mp_census
+
+**添加新图谱需要修改 2 个文件：**
+
+#### 1. 修改 `index.html`
+
+在 `<section id="atlas">` 的 `.atlas-grid` 中添加新的卡片：
+
+```html
+<div class="atlas-card">
+    <div class="atlas-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <!-- 可选择不同的图标路径 -->
+            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/>
+            <path d="M12 6v6l4 2"/>
+        </svg>
+    </div>
+    <span class="atlas-year">2024</span>  <!-- 发表年份 -->
+    <h3 data-i18n-html="true">中文名 <em>拉丁学名</em></h3>
+    <p data-i18n="atlas.newAtlas.desc">图谱描述文字</p>
+    <a href="https://explorer.plantcellatlas.com/?dataset=数据集ID" target="_blank" class="atlas-link" data-i18n="atlas.explore">探索图谱 →</a>
+</div>
+```
+
+#### 2. 修改 `script.js`
+
+在 `translations` 对象中添加中英文翻译：
+
+**中文部分 (zh)：**
+```javascript
+'atlas.newAtlas.desc': '新图谱的中文描述',
+```
+
+**英文部分 (en)：**
+```javascript
+'atlas.newAtlas.desc': 'English description of the new atlas',
+```
+
+> **注意**：`data-i18n` 属性的值需要与 `script.js` 中的翻译键名一致。
+
 ### 修改联系方式
 
 更新 `#contact` 部分的地址、邮箱和 GitHub 链接。

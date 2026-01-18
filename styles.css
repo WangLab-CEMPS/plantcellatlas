@@ -602,6 +602,18 @@ img {
     flex-grow: 1;
 }
 
+.atlas-year {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    color: var(--color-accent);
+    background: rgba(251, 191, 36, 0.15);
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
 .atlas-meta {
     display: inline-block;
     font-size: 0.85rem;

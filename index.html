@@ -19,7 +19,7 @@
             </a>
             <ul class="nav-links">
                 <li><a href="#about" data-i18n="nav.about">关于我们</a></li>
-                <!-- <li><a href="#atlas" data-i18n="nav.atlas">细胞图谱</a></li> -->
+                <li><a href="#atlas" data-i18n="nav.atlas">细胞图谱</a></li>
                 <li><a href="#research" data-i18n="nav.research">研究方向</a></li>
                 <li><a href="#publications" data-i18n="nav.publications">发表论文</a></li>
                 <!-- <li><a href="#team" data-i18n="nav.team">团队</a></li> -->
@@ -112,13 +112,13 @@
         </div>
     </section>
 
-    <!-- Atlas Section (Hidden)
+    <!-- Atlas Section -->
     <section id="atlas" class="section atlas">
         <div class="container">
             <div class="section-header section-header-light">
                 <span class="section-tag">Cell Atlas</span>
                 <h2 class="section-title" data-i18n="atlas.title">细胞图谱数据库</h2>
-                <p class="section-desc" data-i18n="atlas.desc">探索我们收录的植物单细胞数据集</p>
+                <p class="section-desc" data-i18n="atlas.desc">探索我们发表的植物单细胞数据集</p>
             </div>
             <div class="atlas-grid">
                 <div class="atlas-card">
@@ -128,10 +128,10 @@
                             <path d="M12 6v6l4 2"/>
                         </svg>
                     </div>
-                    <h3 data-i18n="atlas.arabidopsis.name" data-i18n-html="true">拟南芥 <em>Arabidopsis</em></h3>
-                    <p data-i18n="atlas.arabidopsis.desc">模式植物全器官单细胞图谱，涵盖根、茎、叶、花等组织</p>
-                    <span class="atlas-meta" data-i18n="atlas.arabidopsis.meta">120,000+ 细胞</span>
-                    <a href="#" class="atlas-link" data-i18n="atlas.viewDetails">查看详情 →</a>
+                    <span class="atlas-year">2019</span>
+                    <h3 data-i18n-html="true">拟南芥根 <em>Arabidopsis</em> Root</h3>
+                    <p data-i18n="atlas.athRoot.desc">拟南芥根部发育的单细胞转录组图谱</p>
+                    <a href="https://explorer.plantcellatlas.com/?dataset=ath_root" target="_blank" class="atlas-link" data-i18n="atlas.explore">探索图谱 →</a>
                 </div>
                 <div class="atlas-card">
                     <div class="atlas-icon">
@@ -141,10 +141,10 @@
                             <path d="M2 12l10 5 10-5"/>
                         </svg>
                     </div>
-                    <h3 data-i18n="atlas.rice.name" data-i18n-html="true">水稻 <em>Oryza sativa</em></h3>
-                    <p data-i18n="atlas.rice.desc">重要粮食作物的发育图谱，追踪胚胎到成熟的细胞命运</p>
-                    <span class="atlas-meta" data-i18n="atlas.rice.meta">200,000+ 细胞</span>
-                    <a href="#" class="atlas-link" data-i18n="atlas.viewDetails">查看详情 →</a>
+                    <span class="atlas-year">2021</span>
+                    <h3 data-i18n-html="true">拟南芥茎 <em>Arabidopsis</em> Shoot</h3>
+                    <p data-i18n="atlas.athShoot.desc">拟南芥茎尖生长点的单细胞图谱</p>
+                    <a href="https://explorer.plantcellatlas.com/?dataset=ath_shoot" target="_blank" class="atlas-link" data-i18n="atlas.explore">探索图谱 →</a>
                 </div>
                 <div class="atlas-card">
                     <div class="atlas-icon">
@@ -156,47 +156,14 @@
                             <path d="M4.22 19.78l4.24-4.24m7.08-7.08l4.24-4.24"/>
                         </svg>
                     </div>
-                    <h3 data-i18n="atlas.maize.name" data-i18n-html="true">玉米 <em>Zea mays</em></h3>
-                    <p data-i18n="atlas.maize.desc">C4植物叶片与根系的细胞多样性研究</p>
-                    <span class="atlas-meta" data-i18n="atlas.maize.meta">150,000+ 细胞</span>
-                    <a href="#" class="atlas-link" data-i18n="atlas.viewDetails">查看详情 →</a>
-                </div>
-                <div class="atlas-card">
-                    <div class="atlas-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
-                        </svg>
-                    </div>
-                    <h3 data-i18n="atlas.tomato.name" data-i18n-html="true">番茄 <em>Solanum lycopersicum</em></h3>
-                    <p data-i18n="atlas.tomato.desc">果实发育与成熟过程中的细胞转录组动态</p>
-                    <span class="atlas-meta" data-i18n="atlas.tomato.meta">180,000+ 细胞</span>
-                    <a href="#" class="atlas-link" data-i18n="atlas.viewDetails">查看详情 →</a>
-                </div>
-                <div class="atlas-card">
-                    <div class="atlas-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        </svg>
-                    </div>
-                    <h3 data-i18n="atlas.poplar.name" data-i18n-html="true">杨树 <em>Populus</em></h3>
-                    <p data-i18n="atlas.poplar.desc">木本植物形成层与木质部发育的单细胞解析</p>
-                    <span class="atlas-meta" data-i18n="atlas.poplar.meta">100,000+ 细胞</span>
-                    <a href="#" class="atlas-link" data-i18n="atlas.viewDetails">查看详情 →</a>
-                </div>
-                <div class="atlas-card atlas-card-more">
-                    <div class="atlas-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 5v14m-7-7h14"/>
-                        </svg>
-                    </div>
-                    <h3 data-i18n="atlas.more.name">更多物种</h3>
-                    <p data-i18n="atlas.more.desc">持续更新中，敬请期待更多植物物种的单细胞数据</p>
-                    <a href="#contact" class="atlas-link" data-i18n="atlas.more.link">合作咨询 →</a>
+                    <span class="atlas-year">2023</span>
+                    <h3 data-i18n-html="true">地钱 <em>Marchantia polymorpha</em></h3>
+                    <p data-i18n="atlas.mpCensus.desc">地钱成熟与衰老轨迹的单细胞图谱</p>
+                    <a href="https://explorer.plantcellatlas.com/?dataset=mp_census" target="_blank" class="atlas-link" data-i18n="atlas.explore">探索图谱 →</a>
                 </div>
             </div>
         </div>
     </section>
-    -->
 
     <!-- Research Section -->
     <section id="research" class="section research">
